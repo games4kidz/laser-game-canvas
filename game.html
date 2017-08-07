@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Laser 0.7</title>
+	<meta name="description" content="">
+	<!-- Prevent zooming http://www.html5rocks.com/en/mobile/touch/ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/style.debug.css">
+	<script src="modernizr.js"></script>
+	<script src="utils.js"></script>
+	<script src="mouse.js"></script>
+	<script src="config.js"></script>
+	<script src="levels.js"></script>
+	<script src="game.js"></script>
+	<script src="interface.js"></script>
+</head>
+<body class="loading">
+	<header class="header" id="header">
+		<nav>
+			<ul class="main-nav">
+				<li class="main-nav-item">
+					<a href="#settings" class="js-overlay"><i class="icon-cog"></i>Einstellungen</a>
+					<div id="settings" class="menu-content about">
+<div class="setting" id="reset">Fortschritte löschen</div>
+<label class="setting" for="reload">Größe ändern/Drehen aktivieren <input type="checkbox" id="reload"></label>
+<label class="setting" for="audio">Töne aktivieren <input type="checkbox" id="audio"></label>
+<br><br>
+Entwickelt von Giulia Alfonsi.<br><br>
+Dies ist nur eine Kopie des Puzzle-Spiels "Lazors", um zu lernen und meine Kenntnisse der JavaScript-Canvas zu verbessern.<br><br>
+Ich habe kein Urheberrecht am Original "Lazors".<br><br>
+Mein Ziel ist es nur, Javascript-Canvas beim Spielen mit einem meiner Lieblingsspiele für Smartphones zu lernen.<br>
+Ich will erreichen, dass diese Version auf jedem Gerät arbeitet, das Javascript-Canvas unterstützt, unabhängig von der Bildschirmgröße.<br>
+Live-Demo und Quellcode auf GitHub.
+					</div>
+				</li>
+				<li class="main-nav-item">
+					<a href="#levels" class="js-overlay"><i class="icon-tasks"></i>Level</a>
+					<div id="levels" class="menu-content"></div>
+				</li>
+				<li class="main-nav-item level-title-wrapper">
+					<div class="level-title" id="title"></div>
+					<div id="solution" class="menu-content">
+						<a href="#" id="level-solution">Lösung anzeigen</a>
+					</div>
+				</li>
+				<li class="main-nav-item">
+					<a href="#" class="level-nav-button js-nav-button" id="prev" title="Vorheriger Level"><i class="icon-caret-left"></i>Vorheriger</a>
+				</li>
+				<li class="main-nav-item">
+					<a href="#" class="level-nav-button js-nav-button" id="next"><i class="icon-caret-right" title="Nächster Level"></i>Nächster</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div class="main">
+		<div class="game-wrapper">
+			<div class="game" onselectstart="return false;">
+				<canvas id="game-main" height="600" width="600"></canvas>
+			</div>
+		</div>
+		<div class="victory">
+			<div>
+				<h1>Congratulations!</h1>
+				Level completed.
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

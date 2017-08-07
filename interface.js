@@ -325,21 +325,21 @@ var init = function() {
     }
   });
 
-  // Reset progress
-  var $reset = $$('#reset');
-  $reset.on('click', function(event) {
-    prev(event);
-    playSound('tap');
-    if (window.confirm('Do you really want to reset your progress?')) {
-      victory = [];
-      localStorage.victory = JSON.stringify(victory);
-      var l = $('.level-done'),
-        ll = l.length;
-      for (var i = 0; i < ll; i++) {
-        removeClass(l[i], 'level-done');
-      }
-    }
-  });
+	// Reset progress
+	var $reset = $$('#reset');
+	$reset.on('click', function(event) {
+		prev(event);
+		playSound('tap');
+		if (window.confirm('Möchtest du deine Fortschritte wirklich löschen??')) {
+			victory = [];
+			localStorage.victory = JSON.stringify(victory);
+			var l = $('.level-done'),
+				ll = l.length;
+			for (var i = 0; i < ll; i++) {
+				removeClass(l[i], 'level-done');
+			}
+		}
+	});
 
   // Load from the last visited level
   l1 = (localStorage['l1'] || l1) * 1;
