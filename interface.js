@@ -330,7 +330,7 @@ var init = function() {
 	$reset.on('click', function(event) {
 		prev(event);
 		playSound('tap');
-		if (window.confirm('Do you really want to reset your progress?')) {
+		if (window.confirm('Möchtest du deine Fortschritte wirklich löschen??')) {
 			victory = [];
 			localStorage.victory = JSON.stringify(victory);
 			var l = $('.level-done'),
